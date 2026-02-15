@@ -4,16 +4,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #a49a9a;
+    background-color: #b9b5b5;
     font-family: Arial, sans-serif;
 }
 
 .login-container {
-    background-color: rgb(240, 236, 236);
+    background-color: rgb(215, 200, 200);
     padding: 60px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 0 100px gray;
+    box-shadow: 0 0 100px rgb(12, 12, 12);
     border-radius: 20px;
 }
 
@@ -30,8 +30,11 @@ button {
     padding: 10px;
     background-color: #007BFF;
     color: white;
+    margin: 15px 0;
     border: none;
     cursor: pointer;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 12px;
 }
 
 button:hover {
@@ -44,3 +47,9 @@ input:hover {
     margin-top: 10px;
     font-size: 14px;
 }
+#toggleLink {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
