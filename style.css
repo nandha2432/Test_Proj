@@ -4,24 +4,36 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b9b5b5;
+
+    background-image: url("my_wall.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     font-family: Arial, sans-serif;
 }
 
+
 .login-container {
-    background-color: rgb(215, 200, 200);
+    background: rgba(255, 255, 255, 0.15); /* transparency */
+    backdrop-filter: blur(10px);           /* blur effect */
+    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+
     padding: 60px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 0 100px rgb(12, 12, 12);
     border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
+
 
 input {
     width: 90%;
     padding: 10px;
     margin: 10px 0;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(28, 25, 25);
     border-radius: 10px;
 }
 
@@ -53,3 +65,6 @@ input:hover {
     text-decoration: underline;
 }
 
+#formTitle {
+    color: #3af319;
+}
