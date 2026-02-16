@@ -55,14 +55,20 @@ submitBtn.addEventListener("click", function () {
         );
 
         if (user) {
-            message.style.color = "green";
-            message.textContent = "Login Successful!";
-        } else {
+        message.style.color = "green";
+        message.textContent = "Login Successful!";
+
+        // Redirect after 1 second
+        setTimeout(() => {
+        window.location.href = "home.html";
+        }, 1000);
+
+        }else {
             message.style.color = "red";
             message.textContent = "Invalid username or password!";
         }
 
-    } else {
+        } else {
 
         const exists = users.find(u => u.username === username);
 
