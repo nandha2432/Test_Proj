@@ -102,3 +102,33 @@ input:hover {
         opacity: 1;
     }
 }
+.games-container {
+    position: relative;
+    height: 500px;
+}
+
+/* ZIG ZAG POSITIONING */
+
+.game1 {
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+.game2 {
+    position: absolute;
+    top: 200px;
+    left: 250px;
+}
+
+.game3 {
+    position: absolute;
+    top: 50px;
+    left: 450px;
+}
+
+.game4 {
+    position: absolute;
+    top: 250px;
+    left: 650px;
+}

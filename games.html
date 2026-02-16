@@ -2,19 +2,148 @@
 <html>
 <head>
     <title>Games</title>
+
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            padding: 40px;
             background-color: #f4f4f4;
+            text-align: center;
         }
+
+        /* HOME BUTTON */
+        .home-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #1e1e2f;
+            color: white;
+            border: none;
+            font-size: 22px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .home-btn:hover {
+            background-color: #33334d;
+            transform: scale(1.1);
+        }
+
+        /* TITLE */
         h1 {
-            color: #333;
+            margin-top: 80px;
+            font-size: 40px;
+            color: #1e1e2f;
         }
+
+        /* GAME CONTAINER */
+        .games-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        /* EACH GAME ITEM */
+        .game-item {
+            text-align: center;
+        }
+
+        /* ROUND IMAGE CIRCLE */
+        .game-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .game-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .game-circle:hover {
+            transform: scale(1.1);
+        }
+
+        /* SMALL TEXT */
+        .game-text {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #090808;
+            font-weight: bold;
+            transition: 0.3s;
+
+        }
+        .game-item:hover .game-text {
+        color: red;
+        transform: scale(1.1);
+        }
+        .game-item:hover .game-text {
+        color: #00aaff;
+        text-shadow: 0 0 10px #00aaff;
+        }
+        
     </style>
 </head>
+
 <body>
-    <h1>Games Page 🎮</h1>
-    <p>This is the games section of your website.</p>
+
+    <!-- HOME BUTTON -->
+    <button class="home-btn" onclick="goHome()">🏠</button>
+
+    <!-- TITLE -->
+    <h1>.io Games</h1>
+
+    <!-- GAMES SECTION -->
+    <div class="games-container">
+
+        <div class="game-item">
+            <div class="game-circle">
+                <img src="images/game1.jpg" alt=" Car Racing">
+            </div>
+            <div class="game-text">Car Racing</div>
+        </div>
+
+        <div class="game-item">
+            <div class="game-circle">
+                <img src="images/game2.jpg" alt="Game 2">
+            </div>
+            <div class="game-text">Shooting Games</div>
+        </div>
+
+        <div class="game-item">
+            <div class="game-circle">
+                <img src="images/game3.jpg" alt="Game 3">
+            </div>
+            <div class="game-text">Horror Games</div>
+        </div>
+
+        <div class="game-item">
+            <div class="game-circle">
+                <img src="images/game4.jpg" alt="Game 4">
+            </div>
+            <div class="game-text">Puzzle Games</div>
+        </div>
+
+    </div>
+
+    <script>
+        function goHome() {
+            window.location.href = "home.html";
+        }
+    </script>
+
 </body>
 </html>
