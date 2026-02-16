@@ -28,17 +28,19 @@
             margin: 10px 0;
             cursor: pointer;
             border-radius: 5px;
+            transition: all 0.3s ease; /* smooth animation */
         }
 
         .menu-item:hover {
             background-color: #33334d;
+            transform: translateX(5px); /* slight move right */
         }
 
         /* RIGHT CONTENT */
         .content {
             flex: 1;
             padding: 40px;
-            background-color: #f4f4f4;
+            background-color: #b6aeae;
         }
     </style>
 </head>
@@ -51,15 +53,26 @@
 
         <div class="menu-item">Home</div>
         <div class="menu-item">Profile</div>
+        <div class="menu-item" onclick="openPage('games.html')">Games</div>
         <div class="menu-item">Settings</div>
         <div class="menu-item">Logout</div>
     </div>
 
     <!-- RIGHT CONTENT -->
     <div class="content">
-        <h1>Welcome! You are logged in 🎉</h1>
+        <h1>Welcome! You are logged in </h1>
         <p>This is your main dashboard area.</p>
     </div>
+    <script>
+    function openPage(url) {
+    window.location.href = url;
+    }
+
+    function logout() {
+        window.location.href = "index.html"; // redirect back to login page
+    }
+    </script>
+
 
 </body>
 </html>
