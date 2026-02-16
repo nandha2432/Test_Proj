@@ -11,13 +11,14 @@ body {
     background-repeat: no-repeat;
 
     font-family: Arial, sans-serif;
+    animation: fadeIn 1s ease-in;
 }
 
 
 .login-container {
-    background: rgba(255, 255, 255, 0.15); /* transparency */
-    backdrop-filter: blur(10px);           /* blur effect */
-    -webkit-backdrop-filter: blur(10px);   /* Safari support */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
     padding: 60px;
     width: 300px;
@@ -26,7 +27,15 @@ body {
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.5s ease;
 }
+
+.login-container:hover {
+    transform: scale(1.03);
+}
+
+
 
 
 input {
@@ -47,10 +56,13 @@ button {
     cursor: pointer;
     box-shadow: 0 0 10px rgb(0, 0, 0);
     border-radius: 12px;
+    transition: transform 0.5s ease;
 }
 
 button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
+    
 }
 input:hover {
     background-color: #b4b2ac;
@@ -67,4 +79,26 @@ input:hover {
 
 #formTitle {
     color: #3af319;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.3s;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

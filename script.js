@@ -66,6 +66,15 @@ submitBtn.addEventListener("click", function () {
         }else {
             message.style.color = "red";
             message.textContent = "Invalid username or password!";
+            message.style.color = "red";
+            message.textContent = "Invalid username or password!";
+
+            document.querySelector(".login-container").classList.add("shake");
+
+            setTimeout(() => {
+             document.querySelector(".login-container").classList.remove("shake");
+            }, 300);
+
         }
 
         } else {
