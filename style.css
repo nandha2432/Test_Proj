@@ -1,134 +1,121 @@
-body {
+/* Reset */
+html, body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-image: url("my_wall.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
-    animation: fadeIn 1s ease-in;
 }
 
-
-.login-container {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    padding: 60px;
-    width: 300px;
-    text-align: center;
-    border-radius: 20px;
-
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-
-    transition: transform 0.5s ease;
-}
-
-.login-container:hover {
-    transform: scale(1.03);
-}
-
-
-
-
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    box-shadow: 0 0 10px rgb(28, 25, 25);
-    border-radius: 10px;
-}
-
-button {
+/* Background Video */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Hamburger Button */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
     color: white;
-    margin: 15px 0;
-    border: none;
     cursor: pointer;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    border-radius: 12px;
-    transition: transform 0.5s ease;
+    z-index: 2;
 }
 
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.1);
-    
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;   /* hidden initially */
+    width: 250px;
+    height: 100%;
+    background: rgba(118, 111, 111, 0.85);
+    padding-top: 80px;
+    transition: 0.8s ease;
 }
-input:hover {
-    background-color: #b4b2ac;
+
+/* When active */
+.sidebar.active {
+    left: 0;
 }
-#message {
-    margin-top: 10px;
+
+/* Links */
+.sidebar a {
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Hero Text Container */
+.hero {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+    z-index: 1;
+}
+
+/* Small top label */
+.tag {
+    letter-spacing: 3px;
     font-size: 14px;
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
-#toggleLink {
-    color: blue;
+
+/* Big heading */
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+}
+
+/* Paragraph */
+.hero p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Button */
+.explore-btn {
+    padding: 12px 30px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
     cursor: pointer;
-    text-decoration: underline;
+    transition: 0.3s ease;
 }
 
-#formTitle {
-    color: #3af319;
+.explore-btn:hover {
+    background: black;
+    color: white;
 }
-
-@keyframes shake {
-    0% { transform: translateX(0); }
-    25% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    75% { transform: translateX(-5px); }
-    100% { transform: translateX(0); }
-}
-
-.shake {
-    animation: shake 0.3s;
-}
-
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.games-container {
-    position: relative;
-    height: 500px;
-}
-
-/* ZIG ZAG POSITIONING */
-
-.game1 {
-    position: absolute;
-    top: 0px;
-    left: 50px;
-}
-
-.game2 {
-    position: absolute;
-    top: 200px;
-    left: 250px;
-}
-
-.game3 {
-    position: absolute;
-    top: 50px;
-    left: 450px;
-}
-
-.game4 {
-    position: absolute;
-    top: 250px;
-    left: 650px;
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -0.5;
 }
