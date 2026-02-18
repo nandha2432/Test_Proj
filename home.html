@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Home</title>
+    <title>Game Hub</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Hero Content -->
-    <div class="hero">
-    <h5 class="tag">ARCADE ZONE
-</h5>
-
-    <h1>
-        PLAY. COMPETE.<br>
-        DOMINATE.
-    </h1>
-
-    <p>
-        Jump into fast-paced action and challenge players
-from around the world. Are you ready to win?
-    </p>
-
-    <button class="explore-btn">START PLAYING</button>
-    </div>
-
 
     <!-- Background Video -->
     <video autoplay muted loop class="bg-video">
         <source src="images/background.mp4" type="video/mp4">
     </video>
 
-    <!-- Hamburger Menu -->
-    <div class="menu-btn" onclick="toggleMenu()">
-        ☰
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero">
+        <h5 class="tag">ARCADE ZONE</h5>
+
+        <h1>
+            PLAY. COMPETE.<br>
+            DOMINATE.
+        </h1>
+
+        <p>
+            Jump into fast-paced action and challenge players
+            from around the world. Are you ready to win?
+        </p>
+
+        <a href="games.html" class="explore-btn">
+            START PLAYING
+        </a>
     </div>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-        <a href="home.html">Home</a>
-        <a href="games.html">Games</a>
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="index.html" class="nav-link logout">Logout</a>
     </div>
 
 <script>
-    function toggleMenu() {
-        document.getElementById("sidebar").classList.toggle("active");
-    }
+function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("active");
+}
 </script>
 
 </body>
